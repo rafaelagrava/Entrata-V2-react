@@ -1,8 +1,8 @@
 import React from "react";
-import {Editable} from '../components/Tables'
+import {TransactionList} from '../tables/transactionList'
 
 const CustomerTab = props => {
-  return <div> <Editable/> </div> 
+  return <div> <TransactionList/> </div> 
 
 };
 

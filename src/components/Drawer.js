@@ -3,11 +3,11 @@ import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import * as MuIcon from '@material-ui/icons';
-import {Drawer,CssBaseline,AppBar,Toolbar,Typography,Divider,Box,IconButton,Badge,Container} from '@material-ui/core';
+import {Drawer,CssBaseline,AppBar,Toolbar,Typography,Divider,Box,IconButton,Badge,Container,} from '@material-ui/core';
 import { Route } from "react-router-dom";
 import HomePage from '../Pages/Homepage';
 import TransactionTab from "../Pages/TransactionTab";
-import Login from "../Pages/Login";
+//import Login from "../Pages/Login";
 import CustomerTab from '../Pages/CustomerTab';
 //import  { mainListItems } from '../components/ListItems';
 import MainlistItem from '../components/ListItems';
@@ -25,7 +25,7 @@ function Copyright() {
   );
 }
 
-const drawerWidth = 250;
+const drawerWidth = 280;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -73,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    
   },
   drawerPaperClose: {
     overflowX: 'hidden',
@@ -100,6 +101,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     overflow: 'auto',
     flexDirection: 'column',
+    background: 'blue',
   },
   fixedHeight: {
     height: 240,
@@ -115,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  //const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+ // const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -162,16 +164,12 @@ const useStyles = makeStyles((theme) => ({
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-
        
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/dashboard" component={HomePage} />
         <Route path="/transaction" component={TransactionTab} />
         <Route path="/customer" component={CustomerTab} />
-        <Route path="/login" component={Login} />
-          {/* <Grid container spacing={3}>
-        
-          </Grid> */}
-          <Box pt={85}>
+
+          <Box pt={29}>
             <Copyright />
           </Box>
         </Container>

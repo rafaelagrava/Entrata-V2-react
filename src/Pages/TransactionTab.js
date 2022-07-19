@@ -1,10 +1,24 @@
-import React from "react";
-import {Table} from '../components/Tables'
 
-const TransactionTab = props => {
-  return <div> <Table/> </div> 
+import React from 'react';
+import {TransactionList} from '../tables/transactionList'
 
-};
+function TransactionTab() {
+  
+
+  return (
+    <div>
+       <TransactionList/>
+    </div>
+        
+      );
+  
+}
 
 export default TransactionTab;
+
+ 
+    
+
+
+
 

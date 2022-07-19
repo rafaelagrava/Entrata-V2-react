@@ -227,7 +227,7 @@ function MainlistItem(){
   <div>
 
 <Tooltip title= "Dashboard" placement="right">
-  <ListItem button component={Link} to="/">
+  <ListItem button component={Link} to="/dashboard">
     <ListItemIcon>
       <Icon.Dashboard />
     </ListItemIcon>
@@ -285,7 +285,7 @@ function MainlistItem(){
 </Tooltip> 
 
 <Tooltip title= "Admin" placement="right">
-  <ListItem button component={Link} to="/admin">
+  <ListItem button component={Link} to="/login">
     <ListItemIcon>
       <Icon.Layers />
     </ListItemIcon>
@@ -295,26 +295,31 @@ function MainlistItem(){
 
 <Divider/>
 
-<ListSubheader inset>AMLC Reports</ListSubheader>
-
+<ListSubheader inset>Encode Transaction</ListSubheader>
+    <Tooltip title= "SSS" placement="right">
       <ListItem button>
          <ListItemIcon>  
            <Icon.Assignment />
          </ListItemIcon>
-         <ListItemText primary="Current month" />
+         <ListItemText primary="SSS" />
        </ListItem>
+      </Tooltip>
+      <Tooltip title= "Pag-IBIG" placement="right">
        <ListItem button>
          <ListItemIcon>
          <Icon.Assignment />
          </ListItemIcon>
-         <ListItemText primary="Last quarter" />
+         <ListItemText primary="Pag-IBIG" />
        </ListItem>
+       </Tooltip>
+       <Tooltip title= "PhilHealth" placement="right">
        <ListItem button>
          <ListItemIcon>
          <Icon.Assignment />
          </ListItemIcon>
-         <ListItemText primary="Year-end sale" />
+         <ListItemText primary="PhilHealth" />
         </ListItem>
+        </Tooltip>
 
 </div>
   );
