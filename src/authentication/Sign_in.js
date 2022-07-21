@@ -104,7 +104,7 @@ class SignIn extends Component{
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in 
+            Sign in and Sign up 
           </Typography>
           <form className={classes.form} noValidate>
             <TextField
